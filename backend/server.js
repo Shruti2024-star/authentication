@@ -8,7 +8,9 @@ const app = express();
 
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://authentication-frontend-pcu9.onrender.com' 
+}));
 app.use(express.json());
 
 // Connect MongoDB
