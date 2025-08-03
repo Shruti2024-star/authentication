@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://authentication-git-main-shrutis-projects-0dfe08cb.vercel.app/signup' 
+  origin: 'https://authentication-frontend-pcu9.onrender.com' 
 }));
 app.use(express.json());
 
