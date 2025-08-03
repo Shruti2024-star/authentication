@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-const backendURL = import.meta.env.VITE_BACKEND_URL;
+const backendURL = process.env.REACT_APP_BACKEND_URL;
+
 
 
 
