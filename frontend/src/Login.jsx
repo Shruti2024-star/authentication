@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 const backendURL = process.env.REACT_APP_BACKEND_URL;
 
 
@@ -105,7 +105,8 @@ function Login() {
         <button type="submit" className="btn btn-primary w-100">Login</button>
       </form>
       <div className="text-center mt-3">
-        <a href="/forgot-password">Forgot password?</a>
+        <Link to="/forgot-password">Forgot Password?</Link>
+
       </div>
     </div>
   </div>
