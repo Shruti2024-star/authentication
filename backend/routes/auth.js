@@ -69,21 +69,20 @@ router.post("/login", async (req, res) => {
   }
 });
 
-
+//reset password
 router.post("/forgot-password", async (req, res) => {
   const { email, newPassword } = req.body;
 
   try {
-    // 1. Find user by email
+    
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // 2. Hash new password
+  
     const hashedPassword = await bcrypt.hash(newPassword, 10);
 
-    // 3. Update password in DB
     user.password = hashedPassword;
     await user.save();
 
