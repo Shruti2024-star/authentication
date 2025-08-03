@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+const backendURL = import.meta.env.REACT_APP_BACKEND_URL;
 
 function ResetPassword() {
   const [form, setForm] = useState({ email: "", newPassword: "" });
@@ -17,7 +18,7 @@ function ResetPassword() {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/forgot-password", form);
+      const res = await axios.post(`${backendURL}/api/auth/forgot-password`, form);
       setMessage(res.data.message);
       setTimeout(() => navigate("/login"), 2000); 
 
