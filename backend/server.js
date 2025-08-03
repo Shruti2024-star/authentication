@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect MongoDB
-mongoose.connect(MONGO_URL)
+mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
