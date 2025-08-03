@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-const backendURL = import.meta.env.REACT_APP_BACKEND_URL;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 
 function ResetPassword() {
   const [form, setForm] = useState({ email: "", newPassword: "" });
